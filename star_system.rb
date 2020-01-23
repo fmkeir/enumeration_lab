@@ -31,7 +31,7 @@ class StarSystem
   end
 
   def get_number_of_planets_closer_than(distance_from_sun_1million_km)
-    return @planets.find_all {|planet| planet.distance_from_sun < distance_from_sun_1million_km}.count()
+    return @planets.count {|planet| planet.distance_from_sun < distance_from_sun_1million_km}
   end
 
   def get_total_number_of_moons
